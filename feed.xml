@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scripta Blog</title>
+    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://localhost:8080</link>
+    <description>Development updates on Zorbio!</description>
+    <pubDate>Sun, 28 Feb 2016 19:00:00 -0500</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Zorbio Devlog 1</title>
+      <link>http://localhost:8080/articles/devlog1/</link>
+      <pubDate>Sun, 28 Feb 2016 19:00:00 -0500</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/devlog1/</guid>
+      <author></author>
+      <description>&lt;p&gt;Hello Zorbians!  We’ll be posting Zorbio development updates here on this blog.
+The game just entered alpha and is under rapid development.  Expect patch notes
+and dev thoughts.&lt;/p&gt;
+&lt;p&gt;In the meantime, here are some pictures from earlier stages in the game’s
+development, including a few of my favorite graphical glitches.&lt;/p&gt;
+&lt;p&gt;We’re excited to see where this game goes, and you guys will be a big part of
+that!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/devlog1/00.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/01.jpg&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/02.jpg&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/03.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/04.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/05.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/06.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/07.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/08.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/09.png&quot; alt=&quot;zorbio image&quot;&gt;
+&lt;img src=&quot;/articles/devlog1/10.png&quot; alt=&quot;zorbio image&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
