@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Preparing for Ludum Dare 38 - Scripta Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Ludum Dare 38 is currently hurtling through space on a direct trajectory with next weekend.  Impact is estimated at 9PM on Friday, and the result will be a chaotic, harebrained, and fun-filled weekend">
+<meta name="keywords" content="ludum-dare,ld38">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Preparing for Ludum Dare 38">
+<meta property="og:url" content="http://scripta.co/articles/Preparing-for-Ludum-Dare-38/index.html">
+<meta property="og:site_name" content="Scripta Games">
+<meta property="og:description" content="Ludum Dare 38 is currently hurtling through space on a direct trajectory with next weekend.  Impact is estimated at 9PM on Friday, and the result will be a chaotic, harebrained, and fun-filled weekend">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://scripta.co/articles/Preparing-for-Ludum-Dare-38/March_for_Science.jpg">
+<meta property="og:updated_time" content="2020-06-24T17:38:19.390Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Preparing for Ludum Dare 38">
+<meta name="twitter:description" content="Ludum Dare 38 is currently hurtling through space on a direct trajectory with next weekend.  Impact is estimated at 9PM on Friday, and the result will be a chaotic, harebrained, and fun-filled weekend">
+<meta name="twitter:image" content="http://scripta.co/articles/Preparing-for-Ludum-Dare-38/March_for_Science.jpg">
+  
+  
+  <link href="/webfonts/ptserif/main.css" rel="stylesheet" type="text/css">
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo logo-text" href="/">Scripta Games</a>
+      <span id="subtitle">Games for the modern web.</span>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://scripta.co"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <section id="main" class="outer"><article id="post-Preparing-for-Ludum-Dare-38" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Preparing for Ludum Dare 38
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/articles/Preparing-for-Ludum-Dare-38/" class="article-date">
+  <time datetime="2017-04-15T04:01:56.000Z" itemprop="datePublished">2017-04-15</time>
+</a>
+      
+      
+  <div class="article-author">
+      <a class="article-author-link" href="https://twitter.com/mwcz">Michael</a>
+  </div>
+
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Ludum Dare 38 is currently hurtling through space on a direct trajectory with
+next weekend.  Impact is estimated at 9PM on Friday, and the result will be a
+chaotic, harebrained, and fun-filled weekend.  Coincidentally, it is also
+Science March slash Earth Day weekend.  Here’s how we’re preparing.</p>
+<a id="more"></a>
+<p>First, for anyone unfamiliar…</p>
+<blockquote>
+<p>Ludum Dare is one of the worlds largest and longest running Game Jam events.
+Every 4 months, we challenge creators to make a game from scratch in a
+weekend.</p>
+</blockquote>
+<p>Jared and I have participated twice, in LD35 (<a href="http://sqoff.com">Square Off</a>, placed 64th
+in Fun) and LD37 (<a href="http://scripta.co/tracer/">Tracer</a>, placed 5th in Innovation).</p>
+<p>With so little time to work, preparation is very important.  Only so much
+preparation is allowed, however.  Any direct work on the game we’ll be making
+can’t begin until Friday evening, but putting our tools in order is allowed.
+The more comfortable we are with the tooling, the more efficiently we can work.</p>
+<p>Here are some of my pet rapid development principles.  They’re ever-evolving
+and some specific to Web games.</p>
+<h2><span id="rapid-development-checklist">Rapid development checklist</span></h2><h3><span id="1-no-build">1. No build</span></h3><p>Yes, we all love front-end builds.  Yes, <a href="https://docs.npmjs.com/cli/run-script">npm scripts</a>,
+<a href="http://gulpjs.com/">gulp</a>, <a href="https://gruntjs.com/">grunt</a>, and <a href="http://broccolijs.com/">broccoli</a> are all the best build tool
+ever.  Front-end builds provide a lot of power and flexibility.</p>
+<p>But they’re not free.  Setup takes time, debugging occasional oddities takes
+time, and most importantly, the builds themselves take time.  Eliminating all
+build steps is a big step towards <strong>optimizing the feedback loop</strong>.</p>
+<p>Fortunately, browser support for <a href="https://github.com/lukehoban/es6features">ES6</a> has arrived, allowing us to run ES6
+natively with no need to transpile.  The only thing missing is the module
+system, forcing us to write <code>&lt;script&gt;</code> tags.  It’s a small price to pay.  On a
+short-lived project like this, manual management of script tags is a cakewalk.</p>
+<p>I do include a babel transpilation script to run before deploying the game, but
+it’s not needed during development.</p>
+<h3><span id="2-browsersynclivereload">2. Browsersync/LiveReload</span></h3><p>Step two in <strong>optimizing the feedback loop</strong> is much easier.  Use
+<a href="https://www.browsersync.io/">Browsersync</a> or <a href="http://livereload.com/">LiveReload</a>.  When you save a file, the browser will
+refresh immediately to reflect the changes.  This will save you from invoking
+<code>Alt+Tab F5</code> five-hundred-thousand times during the weekend.</p>
+<h3><span id="3-focus-on-one-thing-at-a-time">3. Focus on one thing at a time</span></h3><p>With so much to do, staying focused is very difficult.  I’m no good at it, but
+I hope Jared won’t mind me saying that he’s a paragon of focus.</p>
+<p>Sticking to one thing at a time is simply more time-efficient than riffing.
+Avoid riffing.  Riffing is stream of consciousness programming, hopping from
+one minor feature/tweak/bug to the next as soon as you think of it.  It’s like
+<a href="http://catb.org/jargon/html/Y/yak-shaving.html">Yak shaving</a> but not nested.  Also, unlike Yak shaving, riffing is
+entirely avoidable through discipline.</p>
+<p>It helps me to write down (on paper) what I’m about to work on.  “Create
+placeholders for all sprites”, for example.</p>
+<h3><span id="4-the-obvious-ones">4. The obvious ones</span></h3><p>Know your tools.  Get enough sleep.  Drink enough water.  Eat healthy.  Take a
+short walk once in a while.  Make science-themed signs during the week.  Go
+outside and get caught up in the Science March (only valid during LD38
+weekend!).</p>
+<img src="/articles/Preparing-for-Ludum-Dare-38/March_for_Science.jpg" title="science march logo">
+<hr>
+<p>Hopefully the act of writing these down will influence our efforts this Ludum
+Dare weekend.  See you all after the dust clears!</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ld38/">ld38</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ludum-dare/">ludum-dare</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/pity-about-earth/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Pity About Earth...
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/Square-Off-1.1-Patch-Notes/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Square Off 1.1 Patch Notes&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
+
+
+
+
+
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Scripta, Inc&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73203609-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+  </div>
+</body>
+</html>

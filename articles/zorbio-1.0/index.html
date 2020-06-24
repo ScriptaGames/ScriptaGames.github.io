@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Zorbio 1.0 Eats the World! - Scripta Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hello Zorbians!  We are thrilled to present you with the public release of Zorbio.  If boring change-logs aren’t your thing, go ahead and play it now. Zorbio is a a web-based 3D eat-em-up.">
+<meta name="keywords" content="zorbio,devlogs,launch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zorbio 1.0 Eats the World!">
+<meta property="og:url" content="http://scripta.co/articles/zorbio-1.0/index.html">
+<meta property="og:site_name" content="Scripta Games">
+<meta property="og:description" content="Hello Zorbians!  We are thrilled to present you with the public release of Zorbio.  If boring change-logs aren’t your thing, go ahead and play it now. Zorbio is a a web-based 3D eat-em-up.">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://scripta.co/articles/zorbio-1.0/game.jpg">
+<meta property="og:image" content="http://scripta.co/articles/zorbio-1.0/ui.jpg">
+<meta property="og:updated_time" content="2020-06-24T17:38:19.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zorbio 1.0 Eats the World!">
+<meta name="twitter:description" content="Hello Zorbians!  We are thrilled to present you with the public release of Zorbio.  If boring change-logs aren’t your thing, go ahead and play it now. Zorbio is a a web-based 3D eat-em-up.">
+<meta name="twitter:image" content="http://scripta.co/articles/zorbio-1.0/game.jpg">
+  
+  
+  <link href="/webfonts/ptserif/main.css" rel="stylesheet" type="text/css">
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo logo-text" href="/">Scripta Games</a>
+      <span id="subtitle">Games for the modern web.</span>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://scripta.co"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <section id="main" class="outer"><article id="post-zorbio-1.0" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Zorbio 1.0 Eats the World!
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/articles/zorbio-1.0/" class="article-date">
+  <time datetime="2016-11-04T00:00:00.000Z" itemprop="datePublished">2016-11-03</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Zorbio/">Zorbio</a>
+  </div>
+
+      
+  <div class="article-author">
+      <a class="article-author-link" href="https://twitter.com/mwcz">Michael</a>
+  </div>
+
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hello Zorbians!  We are thrilled to present you with the public release of
+Zorbio.  If boring change-logs aren’t your thing, go ahead and <a href="http://zor.bio">play it
+now</a>.</p>
+<p>Zorbio is a a web-based 3D eat-em-up.</p>
+<img src="/articles/zorbio-1.0/game.jpg" title="zorbio screenshot">
+<a id="more"></a>
+<img src="/articles/zorbio-1.0/ui.jpg" title="zorbio UI">
+<p>After the Zorbio open alpha seven months ago, we took all the valuable feedback
+we received and got to work.  Here are the highlights of all the changes we’ve
+made since then:</p>
+<p>Changelog:</p>
+<ul>
+<li>added speed boost ability!</li>
+<li>added proximity drain ability!</li>
+<li>added skins!</li>
+<li>added trails!</li>
+<li>added leaderboards!</li>
+<li>display player name and relative size when aiming at them</li>
+<li>updated scoring algorithm</li>
+<li>redesigned game menus</li>
+<li>redesigned networking code to optimize performance</li>
+<li>reduced game download size</li>
+<li>added a setting for choosing steering method</li>
+<li>game sounds now play in positional 3D (stereo + volume falloff)</li>
+<li>added size progress bar</li>
+<li>enabled rapid position updates (from 20hz to 60hz)</li>
+<li>added a particle burst when capturing a player</li>
+<li>added AI Spheres (and gave them names!)</li>
+<li>added setting to hide own trail</li>
+<li>added growth stages, camera backs up when each stage is reached</li>
+<li>tweaked the value of food</li>
+<li>added ‘flip x’ and ‘flip y’ settings</li>
+<li>animate sphere growth</li>
+<li>optimized food placement and capturing</li>
+<li>players can no longer spawn on top of other players</li>
+<li>added speical thanks section to credits</li>
+<li>updated tutorial</li>
+</ul>
+<p>Bugfixes:</p>
+<ul>
+<li>fixed bug where ‘follow’ steering angles could be off by up to 40 degrees</li>
+<li>fixed crash bug in IE 11</li>
+<li>fixed crash bug in iOS 8</li>
+<li>fixed capturing player size on respawn screen</li>
+<li>fixed various sound-related bugs</li>
+<li>fixed bug where name couldn’t be entered on iOS devices</li>
+<li>fixed server restart message display</li>
+<li>fixed bug where spheres weren’t being removed from scene correctly</li>
+<li>other, more minor bugs</li>
+</ul>
+<hr>
+<p>Huge thanks to all our supporters!  You’ve all got credits embedded in the
+game, but also right here:</p>
+<ul>
+<li>Jessica</li>
+<li>Cassondra</li>
+<li>Rowen</li>
+<li>Elliott</li>
+<li>Samantha</li>
+<li>The SCT guys…</li>
+<li>Wil</li>
+<li>Josh</li>
+<li>Matt</li>
+<li>James</li>
+<li>Simon</li>
+<li>molleindustria</li>
+<li>Moore Square Students</li>
+<li>Order of The End</li>
+<li>Josh N.</li>
+<li>Jessie</li>
+<li>Dean</li>
+<li>Carol</li>
+<li>Logan</li>
+<li>Fiona</li>
+<li>Alan</li>
+<li>Aaron</li>
+<li>Cousin Jared</li>
+<li>Spraguelings</li>
+<li>Red Hat</li>
+<li>Breddy</li>
+<li>Sonya</li>
+<li>Ian</li>
+<li>West Langley</li>
+<li>Mr.doob</li>
+<li>Kahvi Collective (thanks Nik!)</li>
+<li>All the Alpha testers</li>
+<li>Everyone else that helped!</li>
+</ul>
+<hr>
+<p>See you all in the game!</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devlogs/">devlogs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/launch/">launch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zorbio/">zorbio</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/zorbio-1.0.4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Zorbio 1.0.4 Patch Notes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/moore-class/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">A Zorbio Math Lesson&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
+
+
+
+
+
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Scripta, Inc&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73203609-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+  </div>
+</body>
+</html>

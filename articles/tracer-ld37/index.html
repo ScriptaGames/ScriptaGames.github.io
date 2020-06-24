@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Tracer, an Ode to Lines - Scripta Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="During Ludum Dare 37, our second game jam, Jared and I created Tracer.  Read about how it was made and give it a spin.">
+<meta name="keywords" content="ludum-dare,tracer,ld37">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tracer, an Ode to Lines">
+<meta property="og:url" content="http://scripta.co/articles/tracer-ld37/index.html">
+<meta property="og:site_name" content="Scripta Games">
+<meta property="og:description" content="During Ludum Dare 37, our second game jam, Jared and I created Tracer.  Read about how it was made and give it a spin.">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/16.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/zorbio.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/12.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/14.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/1.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/2.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/3.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/4.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/5.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/6.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/7.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/8.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/9.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/10.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/11.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/13.jpg">
+<meta property="og:image" content="http://scripta.co/articles/tracer-ld37/15.jpg">
+<meta property="og:updated_time" content="2020-06-24T17:38:19.390Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tracer, an Ode to Lines">
+<meta name="twitter:description" content="During Ludum Dare 37, our second game jam, Jared and I created Tracer.  Read about how it was made and give it a spin.">
+<meta name="twitter:image" content="http://scripta.co/articles/tracer-ld37/16.jpg">
+  
+  
+  <link href="/webfonts/ptserif/main.css" rel="stylesheet" type="text/css">
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo logo-text" href="/">Scripta Games</a>
+      <span id="subtitle">Games for the modern web.</span>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://scripta.co"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <section id="main" class="outer"><article id="post-tracer-ld37" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Tracer, an Ode to Lines
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/articles/tracer-ld37/" class="article-date">
+  <time datetime="2017-01-26T00:00:00.000Z" itemprop="datePublished">2017-01-25</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tracer/">Tracer</a>
+  </div>
+
+      
+  <div class="article-author">
+      <a class="article-author-link" href="https://twitter.com/mwcz">Michael</a>
+  </div>
+
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>During Ludum Dare 37, our second game jam,
+<a href="https://twitter.com/caramelcode">Jared</a> and <a href="https://twitter.com/mwcz">I</a>
+created Tracer.  Read about how it was made and give it <a href="http://scripta.co/tracer/">a
+spin</a>.</p>
+<p><a href="http://scripta.co"><img src="/articles/tracer-ld37/16.jpg" title="screenshot 1"></a></p>
+<a id="more"></a>
+<p>Tracer was our creation for Ludum Dare 37.  Ludum Dare is a “game jam”; a
+friendly competition where developers create a videogame from scratch during a
+hairbraned weekend.</p>
+<p>I wouldn’t blame you if you want to skip all this and go ahead and play the
+game…</p>
+<p><a href="http://scripta.co/tracer/">Play it!</a></p>
+<h2><span id="the-idea">The idea</span></h2><p>First, a bit of backstory.  In our first game, <a href="http://zor.bio/">Zorbio</a> (an <em>ode to
+spheres</em>), players leave short contrails while flying through space.</p>
+<img src="/articles/tracer-ld37/zorbio.jpg" title="player sphere leaving trails in Zorbio">
+<p>The trails are essentially a weathervane that gives you a visual hint about
+where other players are headed.  Short trails suit that purpose, but we found
+it irresistable to increase the length of the trails dramatically, just to see
+what would happen.  The result, despite not being a good fit for Zorbio, was
+<em>awesome</em>.  It looks something like this:</p>
+<img src="/articles/tracer-ld37/12.jpg" title="screenshot 1">
+<p>We knew there was game potential lurking somewhere in those long, curvy 3D
+trails.  A 3D multiplayer lightcycle game perhaps?  Our Ludum Dare 35 game,
+Square Off (our <em>ode to squares</em>), had been multiplayer, so we knew how much
+complexity networking adds to an already tight timeline.</p>
+<p>Then Jared had a brilliant idea: <strong>3D connect the dots</strong>.</p>
+<img src="/articles/tracer-ld37/14.jpg" title="screenshot 1">
+<p>72 hours later, we had a game, which you may now <a href="http://scripta.co/tracer/">play</a>.</p>
+<p>You can also <a href="https://github.com/ScriptaGames/Tracer">view source</a>, if you’re into that kind of thing.</p>
+<h2><span id="notes-of-appreciation">Notes of appreciation</span></h2><p>Our thanks to YOU, and also: mr.doob, Cassondra, Jessica, Rowen, Elliott.</p>
+<p>Special thanks to Jaume Elias (<a href="https://twitter.com/thespite">@thespite)</a>), an
+extraordinary real-time graphics programmer.  Two of his projects were
+essential for creating Tracer, <a href="https://github.com/spite/THREE.MeshLine">THREE.MeshLine</a>, and an <a href="https://github.com/spite/THREE.MeshLine/blob/master/demo/js/main-shape.js#L90">algorithm
+for spiraling through a 3D mesh looking for points</a>.  Jaume is
+always an inspiration.  Check out his work at <a href="https://www.clicktorelease.com/">clicktorelease.com</a>.</p>
+<h2><span id="development-screenshots">Development screenshots</span></h2><p>Lastly, here’s a batch of some mid-development screenshots showing Tracer
+during its awkward adolescent phase.</p>
+<img src="/articles/tracer-ld37/1.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/2.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/3.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/4.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/5.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/6.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/7.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/8.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/9.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/10.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/11.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/13.jpg" title="screenshot 1">
+<img src="/articles/tracer-ld37/15.jpg" title="screenshot 1">
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ld37/">ld37</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ludum-dare/">ludum-dare</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tracer/">tracer</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/Square-Off-1.1-Patch-Notes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Square Off 1.1 Patch Notes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/zorbio-1.0.5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Zorbio 1.0.5 Patch Notes&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
+
+
+
+
+
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Scripta, Inc&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73203609-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+  </div>
+</body>
+</html>

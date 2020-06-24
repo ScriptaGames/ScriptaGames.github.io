@@ -1,0 +1,56 @@
+{{ #if state === 'title' }}
+<div class="button-container">
+    <button fade-in-out on-click="play-challenge" class="title-button play-button"></button>
+</div>
+<div class="button-container">
+    <button fade-in-out on-click="play-free-draw" class="title-button free-draw-button"></button>
+</div>
+<div fade-in-out class="levelend small-text">
+    <p>Tracer was made by <a target=_blank href="https://twitter.com/caramelcode">Jared</a> and <a target=_blank href="https://twitter.com/mwcz">Michael</a> for Ludum Dare 37.</p>
+    <p>&copy; 2016 <a target=_blank href="http://scripta.co/">Scripta, Inc.</a></p>
+</div>
+{{ /if }}
+{{ #if state === 'play' }}
+
+{{ #if stateParams.levelNum === 0 }}
+<div fade-in-out class="levelend">
+    <p> Center your mouse to fly straight.  Move it to steer.  See if you can hit the target.  </p>
+</div>
+{{ /if }}
+
+{{ #if stateParams.levelNum === 1 }}
+<div fade-in-out class="levelend">
+    <p> This level several targets.  Hit them in order; always go for the opaque one.  </p>
+
+</div>
+{{ /if }}
+
+{{ #if stateParams.levelNum === 2 }}
+<div fade-in-out class="levelend">
+    <p>That looks tricky.. try stopping by holding Right Mouse or 'S' to line up the next target.</p>
+</div>
+{{ /if }}
+
+{{ #if stateParams.levelNum === 3 }}
+<div fade-in-out class="levelend">
+    <p> Now that you're a pro, have fun!  </p>
+</div>
+{{ /if }}
+
+{{ /if }}
+
+{{ #if state === 'levelend' }}
+<div fade-in-out class="levelend">
+    <p>Level complete!  {{ congrats }}</p>
+    {{ #if stateParams.playState.params.levelNum === 4 }}
+    <p>Also, game complete.  Thanks for playing, hope you enjoyed Tracer!</p>
+    {{ /if }}
+    <button class="replay-btn" on-click="replay-level"><img src="images/replay.png"><br>Replay</button>
+    {{ #if stateParams.playState.params.levelNum !== 4 }}
+    <button class="next-btn" on-click="next-level"><img src="images/next.png"><br>Next Level</button>
+    {{ /if }}
+</div>
+{{ /if }}
+{{ #if state === 'end' }}
+<p fade-in-out>You finished the game!</p>
+{{ /if }}

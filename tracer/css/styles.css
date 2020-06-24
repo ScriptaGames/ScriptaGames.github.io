@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+}
+.play {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46%;
+}
+
+.title-button {
+    background-size: cover !important;
+    color: white;
+    border: none;
+    /* height: 566px; */
+    /* width: 974px; */
+    height: 18.866667vw;
+    width: 32.466667vw;
+    font-size: 9rem;
+    transition: transform 0.618s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    left: 34%;
+    top: 0;
+}
+.title-button:focus {
+    border: none;
+    outline: none;
+}
+.title-button.free-draw-button {
+    background: url('../images/free-draw-button.png') no-repeat scroll 0 0 transparent;
+    transform: translate(46%, 22%);
+}
+.title-button.free-draw-button:hover {
+    transform: translate(46%, 22%) scale(0.97, 0.97);
+}
+.title-button.free-draw-button:active {
+    transform: translate(46%, 22%) scale(0.94, 0.94);
+}
+.title-button.play-button {
+    background: url('../images/play-button.png') no-repeat scroll 0 0 transparent;
+    transform: translate(-46%, -22%);
+}
+.title-button.play-button:hover {
+    transform: translate(-46%, -22%) scale(0.97, 0.97);
+}
+.title-button.play-button:active {
+    transform: translate(-46%, -22%) scale(0.94, 0.94);
+}
+
+button {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.levelend {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #8DD1FF;
+    font-size: 2rem;
+    font-weight: bold;
+    /* text-shadow: -1px 0 #005E78, 0 1px #005E78, 1px 0 #005E78, 0 -1px #005E78; */
+}
+
+.levelend button {
+    background: transparent;
+    border: none;
+    border-width: 10px;
+    font-family: serif;
+
+    transition: transform 0.618s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    color: #8DD1FF;
+    font-size: 2rem;
+    font-weight: bold;
+    /* text-shadow: -1px 0 #00CDFC, 0 1px #00CDFC, 1px 0 #00CDFC, 0 -1px #00CDFC; */
+}
+.levelend button.replay-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.levelend button.next-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.levelend button img {
+    width: 120px;
+}
+.levelend button:hover {
+    transform: scale(0.97, 0.97);
+}
+.levelend button:active {
+    transform: scale(0.94, 0.94);
+}
+.levelend button:focus {
+    border: none;
+    outline: none;
+}
+
+.small-text {
+    font-size: 1.2rem;
+    /* user-select: auto; */
+    pointer-events: auto;
+}
+
+a { color: #8DD1FF; }
+a:hover { color: #8DD1FF; }
+a:active { color: #ffffff; }
+a:visited { color: #8DD1FF; }
